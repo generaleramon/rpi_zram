@@ -1,5 +1,5 @@
 [Unit]
-Description = Starting ZRAM
+Description = Systemd Service starting the script to enable the ZRAM
 After = network.target
 
 [Service]
