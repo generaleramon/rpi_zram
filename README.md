@@ -7,16 +7,20 @@ Download the script and copy to /usr/bin/ folder
 make file executable
 > sudo chmod +x /usr/bin/zram.sh
 
-##Start from rc.local
-edit /etc/rc.local file to run script on boot
-> sudo nano /etc/rc.local
+-----------------------------------------------------------------
 
-add line before exit 0
-> /usr/bin/zram.sh &
-
-##Start with a systemd service
+#To run the script with a systemd service do:
 Download the service file and copy to /etc/systemd/system
 > sudo wget -O /etc/systemd/system/zram.service https://raw.githubusercontent.com/generaleramon/rpi_zram/master/zram.service
 
 Enable the service
 > sudo systemctl enable zram.service
+
+-----------------------------------------------------------------
+
+#To run the script from rc.local do:
+edit /etc/rc.local file to run script on boot
+> sudo nano /etc/rc.local
+
+add line before exit 0
+> /usr/bin/zram.sh &
