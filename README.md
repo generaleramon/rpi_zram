@@ -1,5 +1,9 @@
 # Simple ZRAM Enabler Script
-The script is pre-tuned for a 4 Core cpu and the LZ4 algorithm is enabled by default
+The script is pre-tuned for the Raspberry Pi 3/4 
+
+4 Streams/Swap Devices and the LZ4 algorithm are enabled by default
+
+-----------------------------------------------------------------
 
 Download the script and copy to /usr/bin/ folder
 
@@ -33,7 +37,7 @@ add line before exit 0
 
 -----------------------------------------------------------------
 
-#Direct Copy-Paste:
+### Easy  Copy-Paste:
 
 `sudo wget -O /usr/bin/zram.sh https://raw.githubusercontent.com/generaleramon/rpi_zram/master/zram.sh`
 
@@ -42,3 +46,9 @@ add line before exit 0
 `sudo wget -O /etc/systemd/system/zram.service https://raw.githubusercontent.com/generaleramon/rpi_zram/master/zram.service`
 
 `sudo systemctl enable zram.service`
+
+-----------------------------------------------------------------
+
+### Check if the script is working with:
+
+`sudo zramctl`
