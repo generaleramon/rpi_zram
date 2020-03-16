@@ -1,7 +1,7 @@
 # Simple ZRAM Enabler Script
 The script is pre-tuned for the Raspberry Pi 3/4 
 
-4x256MB Streams/Swap Devices and the LZ4 algorithm are enabled by default
+Fixed 4x256MB Streams/Swap Devices and fast LZ4 algorithm are enabled by default
 
 -----------------------------------------------------------------
 
@@ -15,7 +15,7 @@ make file executable
 
 -----------------------------------------------------------------
 
-### To run the script with a systemd service do:
+### To run the script with a systemd service:
 Download the service file and copy to /etc/systemd/system
 
 `sudo wget -O /etc/systemd/system/zram.service https://raw.githubusercontent.com/generaleramon/rpi_zram/master/zram.service`
@@ -26,7 +26,7 @@ Enable the service
 
 -----------------------------------------------------------------
 
-### To run the script from rc.local do:
+### To run the script from rc.local:
 edit /etc/rc.local file to run script on boot
 
 `sudo nano /etc/rc.local`
@@ -37,7 +37,7 @@ add line before exit 0
 
 -----------------------------------------------------------------
 
-### Easy  Copy-Paste:
+### Easy  Copy-Paste solution:
 
 `sudo wget -O /usr/bin/zram.sh https://raw.githubusercontent.com/generaleramon/rpi_zram/master/zram.sh`
 
@@ -49,6 +49,11 @@ add line before exit 0
 
 -----------------------------------------------------------------
 
-### Check if the script is working with:
+### Show supported compression algorithms
+
+`cat /sys/block/zram0/comp_algorithm`
+
+
+### Check if the script/zram is working with:
 
 `sudo zramctl`
