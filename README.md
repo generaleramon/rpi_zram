@@ -1,7 +1,7 @@
 # Simple ZRAM Enabler Script
 The script is pre-tuned for the Raspberry Pi 3/4 
 
-Fixed 4x256MB Streams/Swap Devices and fast LZ4 algorithm are enabled by default
+Fixed 1000MB Swap Device with multiple streams and fast LZ4 compression algorithm are set by default
 
 -----------------------------------------------------------------
 
