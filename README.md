@@ -50,10 +50,10 @@ add line before exit 0
 -----------------------------------------------------------------
 
 ### Show supported compression algorithms
-
 `cat /sys/block/zram0/comp_algorithm`
 
+### Show ZRam stats
+`cat /sys/block/zram0/mm_stat`
 
 ### Check if the script/zram is working with:
-
 `sudo zramctl`
