@@ -1,7 +1,9 @@
 # Simple ZRAM Enabler Script
 The script is pre-tuned for the Raspberry Pi 3/4 
 
-Fixed 1000MB Swap Device with multiple streams and fast LZ4 compression algorithm are set by default
+Fixed `1500MB` Swap with multiple streams and `LZ4`+`ZSTD` compression algorithms are set by default
+
+The first ZRAM device using `LZ4`(Fast) has max priority, the `ZSTD`(Best Compression) device is only used when the first is full 
 
 -----------------------------------------------------------------
 
