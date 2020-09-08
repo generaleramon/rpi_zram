@@ -22,7 +22,7 @@ modprobe zram num_devices=2
 
 ## Set LZ4 and LZ4HC as compression algorithms
 echo lz4 > /sys/block/zram0/comp_algorithm
-echo lz4hc > /sys/block/zram1/comp_algorithm
+echo zstd > /sys/block/zram1/comp_algorithm
 
 ##Set 4GB as -Total- ZRAM Size
 mem=2150000000
