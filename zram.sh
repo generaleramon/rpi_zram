@@ -24,7 +24,7 @@ modprobe zram num_devices=2
 echo lz4 > /sys/block/zram0/comp_algorithm
 echo lz4hc > /sys/block/zram1/comp_algorithm
 
-##Set 2GB as -Total- ZRAM Size
+##Set 4GB as -Total- ZRAM Size
 mem=2150000000
 
 ##Set size and create swap devices
