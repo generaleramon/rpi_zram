@@ -47,7 +47,7 @@ add line before exit 0
 
 `sudo wget -O /etc/cron.hourly/compact.sh https://raw.githubusercontent.com/generaleramon/rpi_zram/master/compact.sh`
 
-`sudo chmod +x /etc/cron.daily/compact.sh`
+`sudo chmod +x /etc/cron.hourly/compact.sh`
 
 `sudo wget -O /etc/systemd/system/zram.service https://raw.githubusercontent.com/generaleramon/rpi_zram/master/zram.service`
 
