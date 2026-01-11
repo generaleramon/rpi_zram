@@ -1,7 +1,5 @@
 # Simple ZRAM Enabler Script
-The script is pre-tuned for the Raspberry Pi 3/4 
-
-Fixed `4GB` Swap with multiple streams and `LZ4` compression algorithms are set by default
+Fixed `16GB` Swap with multiple streams and `ZSTD Level 8` compression algorithms are set by default
 
 -----------------------------------------------------------------
 
