@@ -19,15 +19,13 @@ swapoff -a
 
 ## Enable 1 Zram device
 modprobe zram num_devices=1
+echo "algo=zstd level=8" > /sys/block/zram0/algorithm_params
 
 ## Set LZ4 as compression algorithms
 echo zstd > /sys/block/zram0/comp_algorithm
 
-##Set 4GB as -Total- ZRAM Size
-mem=9999999999
-
 ##Set size and create swap devices
 ##Max number of compression streams(Cores) is detected automatically
-echo $mem > /sys/block/zram0/disksize
+echo 16G > /sys/block/zram0/disksize
 mkswap /dev/zram0
 swapon -p 0 /dev/zram0
